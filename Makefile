@@ -12,6 +12,12 @@ TARGET_PLATFORM := apple2
 AC := $(TOOL_DIR)/AppleCommander-macosx-1.5.0.jar.jar
 EMULATOR := $(TOOL_DIR)/izapple2sdl_macos
 
+all: submodules clean cc65 hello run
+	@
+
+submodules:
+	@git submodule update --init --recursive
+
 clean:
 	@rm $(OUT_DIR)/* 2>/dev/null; true
 
