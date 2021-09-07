@@ -1,0 +1,3 @@
+*.apple2
+*.dsk
+!template.dsk
